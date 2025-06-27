@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /streamhub/
+Disallow: /  # Blocks root and other directories
+Sitemap: https://thineticket.github.io/streamhub/sitemap.xml
