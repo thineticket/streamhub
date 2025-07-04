@@ -8,7 +8,7 @@
     <meta name="keywords" content="free sports streaming, live sports, F1 streaming, NFL games, NBA basketball, UFC fights, free movies, concert streaming, award shows">
     <meta name="robots" content="index, follow">
     <meta name="author" content="StreamHub">
-	<meta name="monetag" content="0626ed9be1f518ce7fdc0ff06eb2d54f">
+    <meta name="monetag" content="0626ed9be1f518ce7fdc0ff06eb2d54f">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
@@ -818,6 +818,8 @@ hs.src = ('//s10.histats.com/js15_as.js');
     <!-- Header -->
     <header>
 
+	    
+
 <button onclick="startOpening()">Watch Live</button>
 
 <script>
@@ -945,6 +947,31 @@ function startOpening() {
 </script>
 
 
+
+	<div style="text-align:center; font-family:Arial,sans-serif; padding:50px;">
+  <h2>Redirecting to Live Sports in <span id="countdown">5</span> seconds...</h2>
+  <p>You're being taken to: <strong>SPX Live Sports Stream</strong></p>
+  <p><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhealthkiller.com%2F&psig=AOvVaw2RDP2VVL7uME0Jk7MC_0dl&ust=1751728817104000&source=images&cd=vfe&opi=89978449&ved=0CAQQn5wMahcKEwjApdTFwKOOAxUAAAAAHQAAAAAQBA">Click here if not redirected</a></p>
+</div>
+
+<script>
+// Countdown + Redirect
+(function() {
+  var seconds = 5;
+  var countdownEl = document.getElementById('countdown');
+  
+  var timer = setInterval(function() {
+    seconds--;
+    countdownEl.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fhealthkiller.com%2F&psig=AOvVaw2RDP2VVL7uME0Jk7MC_0dl&ust=1751728817104000&source=images&cd=vfe&opi=89978449&ved=0CAQQn5wMahcKEwjApdTFwKOOAxUAAAAAHQAAAAAQBA";
+    }
+  }, 1000);
+})();
+</script>
+
+	
     <!-- Sports Section -->
     <section id="sports" class="sports">
         <div class="container">
