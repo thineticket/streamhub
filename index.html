@@ -3,52 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamHub | Watch All Sports & Entertainment Live for Free</title>
-    <meta name="description" content="Stream live sports including F1, NFL, NBA, UFC and entertainment like movies, concerts, and award shows - all for free with instant access. No signup required!">
-    <meta name="keywords" content="free sports streaming, live sports, F1 streaming, NFL games, NBA basketball, UFC fights, free movies, concert streaming, award shows">
+    <meta name="description" content="Watch all sports TV broadcasts and entertainment content live for free on Amazon. Stream NFL, NBA, MLB, movies, concerts and more without subscription fees.">
+    <meta name="keywords" content="free sports streaming, live sports, Amazon Prime sports, watch sports free, live football, basketball streaming, free movies, live concerts, UFC streaming">
     <meta name="robots" content="index, follow">
     <meta name="author" content="StreamHub">
-    <meta name="monetag" content="0626ed9be1f518ce7fdc0ff06eb2d54f">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <title>Free Live Sports & Entertainment Streaming | Watch All Content on Amazon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "StreamHub",
-      "url": "https://streamhub.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://streamhub.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #e10600;
-            --secondary: #1e90ff;
-            --accent: #ffd700;
-            --dark: #0a0f2b;
-            --darker: #05081e;
-            --light: #f0f8ff;
-            --gray: #a0a0c0;
-            --transition: all 0.3s ease;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
-            color: var(--light);
-            overflow-x: hidden;
-            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
         
         .container {
@@ -57,16 +33,13 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
         header {
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px 0;
-            background: rgba(10, 15, 43, 0.95);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
         
         .header-content {
@@ -78,594 +51,308 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            text-decoration: none;
         }
         
-        .logo-icon {
+        .logo i {
             font-size: 2.5rem;
-            color: var(--primary);
-            text-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+            color: #00c3ff;
+            margin-right: 10px;
         }
         
-        .logo h1 {
-            font-size: 1.8rem;
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, #00c3ff, #ffff1c);
             -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 1px;
-        }
-        
-        .free-badge {
-            background: linear-gradient(to right, var(--accent), #ffa502);
-            color: var(--darker);
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 20px;
-            margin-left: 10px;
-            animation: pulse 2s infinite;
+            -webkit-text-fill-color: transparent;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+        }
+        
+        nav li {
+            margin-left: 25px;
         }
         
         nav a {
-            color: var(--light);
+            color: #fff;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
+            font-weight: 500;
+            transition: all 0.3s ease;
             position: relative;
+            padding: 5px 0;
         }
         
         nav a:hover {
-            color: var(--primary);
+            color: #00c3ff;
         }
         
-        nav a:after {
+        nav a::after {
             content: '';
             position: absolute;
+            bottom: 0;
+            left: 0;
             width: 0;
             height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: var(--primary);
-            transition: var(--transition);
+            background: #00c3ff;
+            transition: width 0.3s ease;
         }
         
-        nav a:hover:after {
+        nav a:hover::after {
             width: 100%;
         }
         
-        /* Hero Section */
         .hero {
-            padding: 80px 0 60px;
+            padding: 100px 0 60px;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
         
-        .hero:before {
+        .hero::before {
             content: '';
             position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(30, 144, 255, 0.2) 0%, transparent 70%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.15;
             z-index: -1;
-        }
-        
-        .hero:after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            left: -100px;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(225, 6, 0, 0.15) 0%, transparent 70%);
-            z-index: -1;
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: var(--transition);
-        }
-        
-        .hero-image img:hover {
-            transform: perspective(1000px) rotateY(0deg);
         }
         
         .hero h1 {
-            font-size: 3.4rem;
-            line-height: 1.1;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
             margin-bottom: 20px;
-            background: linear-gradient(to right, #ffffff, #e0e0ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         
-        .highlight {
-            color: var(--accent);
-            font-weight: 800;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        .hero h1 span {
+            background: linear-gradient(90deg, #00c3ff, #ffff1c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            color: #c0c0e0;
-            max-width: 600px;
-            margin-bottom: 30px;
-            line-height: 1.7;
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
+            background: linear-gradient(90deg, #00c3ff, #00ff95);
+            color: #000;
+            font-weight: 700;
+            font-size: 1.3rem;
             padding: 18px 45px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: var(--transition);
-            box-shadow: 0 10px 25px rgba(225, 6, 0, 0.4);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 195, 255, 0.4);
+            transition: all 0.3s ease;
+            margin: 20px 0;
             border: none;
             cursor: pointer;
-            margin-top: 20px;
-        }
-        
-        .cta-button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .cta-button:hover:before {
-            left: 100%;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .cta-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(225, 6, 0, 0.6);
+            box-shadow: 0 15px 30px rgba(0, 195, 255, 0.6);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
         }
         
         .features {
-            display: flex;
-            gap: 25px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            padding: 80px 0;
             background: rgba(255, 255, 255, 0.05);
-            padding: 12px 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .feature i {
-            color: var(--accent);
-            font-size: 1.8rem;
-        }
-        
-        .feature span {
-            color: var(--light);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
-        /* Sports Section */
-        .sports {
-            padding: 100px 0;
-            background: rgba(20, 25, 60, 0.3);
-            position: relative;
-        }
-        
-        .sports:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            backdrop-filter: blur(10px);
         }
         
         .section-title {
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 60px;
+            color: #fff;
             position: relative;
         }
         
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            margin: 20px auto 0;
-            border-radius: 5px;
-        }
-        
-        .sports-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 25px;
-        }
-        
-        .sport-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            transform: translateY(0);
-            position: relative;
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .sport-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .sport-image {
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            flex: 1;
-        }
-        
-        .sport-image:after {
+        .section-title::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, rgba(10, 15, 43, 0.9), transparent);
-        }
-        
-        .sport-content {
-            padding: 15px;
-            position: relative;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.4);
-        }
-        
-        .sport-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-            color: var(--accent);
-        }
-        
-        .sport-content p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        /* Call to Action */
-        .cta-section {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(135deg, #1a0a2b 0%, #0f1a40 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(to right, var(--secondary), var(--primary));
-        }
-        
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .cta-content h2 {
-            font-size: 3rem;
-            margin-bottom: 25px;
-            background: linear-gradient(to right, #ffffff, var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .cta-content p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-        
-        .benefits {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        
-        .benefit {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            flex: 1;
-            min-width: 180px;
-            max-width: 230px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-        }
-        
-        .benefit:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-        }
-        
-        .benefit i {
-            font-size: 2.2rem;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-        
-        .benefit h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-        
-        .benefit p {
-            font-size: 0.95rem;
-            color: var(--gray);
-            margin-bottom: 0;
-        }
-        
-        .free-tag {
-            display: inline-block;
-            background: linear-gradient(to right, var(--accent), #ff9f1a);
-            color: var(--darker);
-            padding: 12px 35px;
-            border-radius: 50px;
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-            animation: pulse 2s infinite;
-        }
-        
-        /* Footer */
-        footer {
-            background: rgba(5, 10, 30, 0.95);
-            padding: 60px 0 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 3px;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-column ul li a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.95rem;
-        }
-        
-        .footer-column ul li a i {
-            color: var(--secondary);
-            width: 18px;
-            font-size: 0.9rem;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--accent);
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--light);
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-        
-        .social-icons a:hover {
-            background: var(--primary);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Access Steps */
-        .access-steps {
-            background: rgba(30, 35, 70, 0.4);
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .steps-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 50px;
-            flex-wrap: wrap;
-        }
-        
-        .step {
-            flex: 1;
-            min-width: 220px;
-            max-width: 280px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 30px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .step:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .step-number {
-            position: absolute;
-            top: -20px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: white;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #00c3ff, #00ff95);
+            border-radius: 2px;
         }
         
-        .step i {
-            font-size: 2.5rem;
-            color: var(--accent);
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #00c3ff;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .feature-card p {
+            color: #ccc;
+            font-size: 1rem;
+        }
+        
+        .categories-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+        
+        .category-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 25px 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .category-item:hover {
+            background: rgba(0, 195, 255, 0.15);
+            transform: scale(1.05);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            color: #00c3ff;
             margin-bottom: 15px;
         }
         
-        .step h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
+        .category-item h3 {
+            color: #fff;
+            font-size: 1.2rem;
         }
         
-        .step p {
-            color: var(--gray);
-            font-size: 0.95rem;
+        .sports-highlight {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
         }
         
-        /* FAQ Section */
+        .sports-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #00c3ff;
+            text-align: center;
+        }
+        
+        .sports-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .sport-tag {
+            background: rgba(0, 195, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(0, 195, 255, 0.2);
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            color: #e0e0e0;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            color: #00c3ff;
+            font-weight: 600;
+            text-align: right;
+        }
+        
         .faq-section {
             padding: 80px 0;
-            background: rgba(15, 20, 50, 0.4);
         }
         
         .faq-container {
@@ -674,116 +361,122 @@
         }
         
         .faq-item {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
             margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-        }
-        
-        .faq-item:hover {
-            border-color: var(--primary);
         }
         
         .faq-question {
-            padding: 18px;
+            padding: 20px 25px;
             background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .faq-question i {
-            transition: var(--transition);
         }
         
         .faq-answer {
-            padding: 0 18px;
+            padding: 0 25px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
+            color: #ccc;
         }
         
         .faq-item.active .faq-answer {
-            padding: 18px;
-            max-height: 500px;
+            padding: 20px 25px;
+            max-height: 200px;
         }
         
-        /* Animations */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1560272564-c83ee6d4431e?ixlib=rb-4.0.3') no-repeat center center/cover;
         }
         
-        /* Responsive Design */
-        @media (max-width: 900px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-text {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .features {
-                justify-content: center;
-            }
-            
-            .sports-grid {
-                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            }
+        .cta-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #aaa;
+            max-width: 800px;
+            margin: 30px auto 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #00c3ff;
+        }
+        
+        .copyright {
+            color: #777;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
-            nav ul {
-                display: none;
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
-            .hero h1 {
-                font-size: 2.3rem;
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            nav ul {
+                display: none;
             }
             
             .section-title {
                 font-size: 2rem;
             }
             
-            .cta-content h2 {
+            .cta-section h2 {
                 font-size: 2.2rem;
             }
             
-            .free-tag {
-                font-size: 1.4rem;
-                padding: 10px 25px;
-            }
-            
-            .sports-grid {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 15px;
-            }
-            
-            .sport-content h3 {
-                font-size: 1.1rem;
+            .category-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             }
         }
     </style>
 	
-	
+		
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B17D723JSP"></script>
 <script>
@@ -793,8 +486,8 @@
 
   gtag('config', 'G-B17D723JSP');
 </script>
-
-<!-- Histats.com  START  (aync) http://shoriful-islam-shagor.com-->
+	
+	<!-- Histats.com  START  (aync) http://shoriful-islam-shagor.com-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4481953,4,408,270,55,00011111']);
 _Hasync.push(['Histats.fasi', '1']);
@@ -805,153 +498,242 @@ hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
 <noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4481953&amp;101" alt="site hit counter" border="0" /></a></noscript>
-<!-- https://thineticket.github.io/streamhub/ Histats.com  END http://shoriful-islam-shagor.com -->
-<script type='text/javascript' src='//pl26832338.profitableratecpm.com/5b/b2/ad/5bb2ad631462f043980e50d4fbabcf96.js'></script>
+<!-- https://thineticket.github.io/streamhub/ Histats.com  END http:// shoriful-islam-shagor.com https://grabify.link/CZ1BJQ-->
+
+
+
 
 </head>
 <body>
-
-	<script type='text/javascript' src='//pl26832945.profitableratecpm.com/64/9a/d2/649ad2add6258dd29888a8364bc94228.js'></script>
-<script type='text/javascript' src='//pl26627074.profitableratecpm.com/6d/1e/41/6d1e41491135c93b2e4f09202b416669.js'></script>
-
-	
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-
-	    
-
-<button onclick="startOpening()">Watch Live</button>
-
-<script>
-function startOpening() {
-    // Open first tab immediately
-    window.open("https://www.profitableratecpm.com/v0n3ra81me?key=3f908252bea5e07f045f389344d1aa18", "_blank");
-    
-    // Open remaining tabs
-    for (let i = 1; i < 5; i++) {
-        setTimeout(() => {
-            window.open("https://www.profitableratecpm.com/v0n3ra81me?key=3f908252bea5e07f045f389344d1aa18", "_blank");
-        }, i * 5000);
-    }
-}
-</script>
-
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <i class="fas fa-play-circle logo-icon" aria-hidden="true"></i>
-                    <h1>StreamHub <span class="free-badge">FREE</span></h1>
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
-                        <li><a href="#sports"><i class="fas fa-futbol" aria-hidden="true"></i> Sports</a></li>
-                        <li><a href="#entertainment"><i class="fas fa-film" aria-hidden="true"></i> Entertainment</a></li>
-                        <li><a href="#faq"><i class="fas fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-                    </ul>
-                </nav>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-tv"></i>
+                <div class="logo-text">StreamHub</div>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#sports">Sports</a></li>
+                    <li><a href="#entertainment">Entertainment</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-	
-
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Watch <span class="highlight">All Sports & Entertainment</span> Live for Free</h1>
-                    <p>Get instant access to every match, game, event, movie and concert from around the world. signup required - start streaming in seconds!</p>
-                    <a href="https://data852.click/78ff77798576fe6bc7e0/7678b3e802/?placementName=default" class="cta-button">
-                        <i class="fas fa-play-circle" aria-hidden="true"></i> Start Streaming Now
-                    </a>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-bolt" aria-hidden="true"></i>
-                            <span>Instant Access - For Free Signup</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-hd" aria-hidden="true"></i>
-                            <span>Full HD Streaming Quality</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-globe-americas" aria-hidden="true"></i>
-                            <span>Available Worldwide</span>
-                        </div>
+            <h1>Watch <span>All Sports & Entertainment</span> Live & Free</h1>
+            <p>Stream every major sporting event, blockbuster movies, live concerts, and award shows in HD quality without any subscription fees. Available exclusively on Amazon Prime for a limited time.</p>
+            <a href="https://shrinkme.ink/l5BlQGi" target="_blank" class="cta-button">
+                <i class="fas fa-play-circle"></i> Start Watching Now
+            </a>
+            <p class="disclaimer">No subscription required • Cancel anytime • Available worldwide</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Stream With Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tv"></i>
                     </div>
+                    <h3>100% Free Access</h3>
+                    <p>Watch all live sports and entertainment without any subscription fees or hidden charges. No credit card required.</p>
                 </div>
-                <div class="hero-image">
-                    <img src="img/sports19.jpg" alt="Live sports and entertainment streaming on multiple devices">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3>Live HD Streaming</h3>
+                    <p>Crystal clear HD quality streams with minimal buffering. Never miss a crucial moment or performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Worldwide Coverage</h3>
+                    <p>Access content from every major league and entertainment event worldwide. Available in all countries with no restrictions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Any Device Support</h3>
+                    <p>Stream on your TV, smartphone, tablet, or computer. Compatible with all modern devices and platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Categories Section -->
+    <section class="categories-section" id="sports">
+        <div class="container">
+            <h2 class="section-title">Sports You Can Watch Live</h2>
+            <p style="color: #bbb; max-width: 800px; margin: 0 auto 50px;">We cover every major sport with live broadcasts, including exclusive events you won't find anywhere else.</p>
+            
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <h3>Motor Racing</h3>
+                    <p>F1, MotoGP, Rally</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-horse"></i>
+                    </div>
+                    <h3>Horse Racing</h3>
+                    <p>Derbies, Championships</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3>Football</h3>
+                    <p>Premier League, La Liga</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-cricket"></i>
+                    </div>
+                    <h3>Cricket</h3>
+                    <p>Test, ODI, T20</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-boxing-glove"></i>
+                    </div>
+                    <h3>Boxing</h3>
+                    <p>World Championships</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-fist-raised"></i>
+                    </div>
+                    <h3>UFC</h3>
+                    <p>MMA, Fight Nights</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-football-ball"></i>
+                    </div>
+                    <h3>NFL</h3>
+                    <p>Super Bowl, Regular Season</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3>NBA</h3>
+                    <p>Playoffs, Finals</p>
+                </div>
+            </div>
+            
+            <div class="sports-highlight">
+                <h3>More Major Sports</h3>
+                <div class="sports-list">
+                    <span class="sport-tag">MLB</span>
+                    <span class="sport-tag">NHL</span>
+                    <span class="sport-tag">Tennis</span>
+                    <span class="sport-tag">Badminton</span>
+                    <span class="sport-tag">Golf</span>
+                    <span class="sport-tag">Cycling</span>
+                    <span class="sport-tag">Rugby</span>
+                    <span class="sport-tag">Olympic Events</span>
+                </div>
+            </div>
+            
+            <a href="https://shrinkme.ink/l5BlQGi" target="_blank" class="cta-button">
+                <i class="fas fa-play-circle"></i> Access All Sports Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Entertainment Section -->
+    <section class="categories-section" id="entertainment" style="background: rgba(255,255,255,0.03);">
+        <div class="container">
+            <h2 class="section-title">Entertainment & More</h2>
+            <p style="color: #bbb; max-width: 800px; margin: 0 auto 50px;">Beyond sports, enjoy a wide variety of entertainment content streamed live.</p>
+            
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Movies</h3>
+                    <p>Latest Blockbusters</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music</h3>
+                    <p>Live Performances</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Concerts</h3>
+                    <p>Global Music Events</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Festivals</h3>
+                    <p>Music & Cultural Events</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Award Shows</h3>
+                    <p>Oscars, Grammys, Emmys</p>
+                </div>
+            </div>
+            
+            <a href="https://shrinkme.ink/l5BlQGi" target="_blank" class="cta-button">
+                <i class="fas fa-play-circle"></i> Access Entertainment Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Viewers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">I've saved hundreds of dollars on cable subscriptions. The streaming quality is incredible and I can watch all my favorite teams without blackouts.</p>
+                    <p class="testimonial-author">- Michael T., New York</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As an expat, it was impossible to watch my home team's games until I found this service. Now I never miss a match, no matter where I am in the world.</p>
+                    <p class="testimonial-author">- Sarah L., London</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The entertainment selection is fantastic! From UFC fights to live concerts, everything is available in one place. The multi-device support is a game changer.</p>
+                    <p class="testimonial-author">- James K., San Francisco</p>
                 </div>
             </div>
         </div>
     </section>
 	
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-5939381389120744/6100767628"
-     crossorigin="anonymous"></script>
-<!-- AdMob ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-app-pub-5939381389120744/6100767628"
-     data-ad-slot="5129616674"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-    <!-- Access Steps -->
-    <section class="access-steps">
-        <div class="container">
-            <h2 class="section-title">How to Get Instant Access</h2>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <i class="fas fa-mouse-pointer" aria-hidden="true"></i>
-                    <h3>Click The Button</h3>
-                    <p>Simply click the "Start Streaming" button to get instant access</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <i class="fas fa-play-circle" aria-hidden="true"></i>
-                    <h3>Start Watching</h3>
-                    <p>Immediately start watching your favorite content with no delays</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <i class="fas fa-smile" aria-hidden="true"></i>
-                    <h3>Enjoy For Free</h3>
-                    <p>Registration- enjoy premium content for free</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-5939381389120744/6100767628"
-     crossorigin="anonymous"></script>
-<!-- AdMob ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-app-pub-5939381389120744/6100767628"
-     data-ad-slot="5129616674"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-
-	<div style="text-align:center; font-family:Arial,sans-serif; padding:50px;">
+	
+<div style="text-align:center; font-family:Arial,sans-serif; padding:50px;">
   <h2>Redirecting to Live Sports in <span id="countdown">5</span> seconds...</h2>
   <p>You're being taken to: <strong>SPX Live Sports Stream</strong></p>
-  <p><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhealthkiller.com%2F&psig=AOvVaw2RDP2VVL7uME0Jk7MC_0dl&ust=1751728817104000&source=images&cd=vfe&opi=89978449&ved=0CAQQn5wMahcKEwjApdTFwKOOAxUAAAAAHQAAAAAQBA">Click here if not redirected</a></p>
+  <p><a href="https://shrinkme.ink/da8Il">Click here if not redirected</a></p>
 </div>
 
 <script>
@@ -965,427 +747,140 @@ function startOpening() {
     countdownEl.textContent = seconds;
     if (seconds <= 0) {
       clearInterval(timer);
-      window.location.href = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fhealthkiller.com%2F&psig=AOvVaw2RDP2VVL7uME0Jk7MC_0dl&ust=1751728817104000&source=images&cd=vfe&opi=89978449&ved=0CAQQn5wMahcKEwjApdTFwKOOAxUAAAAAHQAAAAAQBA";
+      window.location.href = "https://shrinkme.ink/da8Il";
     }
   }, 1000);
 })();
 </script>
 
-	
-    <!-- Sports Section -->
-    <section id="sports" class="sports">
-        <div class="container">
-            <h2 class="section-title">All Major Sports Available</h2>
-            <div class="sports-grid">
-               
-			   
-
-                <a href="#"><div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Motor-Racing.webp');" aria-label="Racing events"></div>
-                    <div class="sport-content">
-                        <h3>Motor Racing</h3>
-                        <p>F1, MotoGP, Rally & more motorsports</p>
-                    </div>
-                </div></a>
-                
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/nascar.png');" aria-label="NASCAR racing"></div>
-                    <div class="sport-content">
-                        <h3>NASCAR</h3>
-                        <p>Full season coverage of America's top racing series</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Horse-Racing.webp');" aria-label="Horse racing"></div>
-                    <div class="sport-content">
-                        <h3>Horse Racing</h3>
-                        <p>Major races including Triple Crown events</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Football.jpg');" aria-label="Football match"></div>
-                    <div class="sport-content">
-                        <h3>Football</h3>
-                        <p>Premier League, World Cup, Champions League</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Cricket.webp');" aria-label="Cricket match"></div>
-                    <div class="sport-content">
-                        <h3>Cricket</h3>
-                        <p>Test matches, ODIs, T20s, IPL, World Cup</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Boxing.jpeg');" aria-label="Boxing match"></div>
-                    <div class="sport-content">
-                        <h3>Boxing</h3>
-                        <p>World championship fights and major events</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/UFC.png');" aria-label="UFC fight"></div>
-                    <div class="sport-content">
-                        <h3>UFC</h3>
-                        <p>MMA fights, championship events & prelims</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/NFL.webp');" aria-label="NFL football"></div>
-                    <div class="sport-content">
-                        <h3>NFL</h3>
-                        <p>Regular season, playoffs & Super Bowl</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/NBA.avif');" aria-label="NBA basketball"></div>
-                    <div class="sport-content">
-                        <h3>NBA</h3>
-                        <p>Regular season, playoffs & Finals</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/MLB.png');" aria-label="MLB baseball"></div>
-                    <div class="sport-content">
-                        <h3>MLB</h3>
-                        <p>Regular season, playoffs & World Series</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/NHL.png');" aria-label="NHL hockey"></div>
-                    <div class="sport-content">
-                        <h3>NHL</h3>
-                        <p>Regular season, playoffs & Stanley Cup</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Tennis.jpg');" aria-label="Tennis match"></div>
-                    <div class="sport-content">
-                        <h3>Tennis</h3>
-                        <p>Grand Slams, ATP, WTA tournaments</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Badminton.avif');" aria-label="Badminton match"></div>
-                    <div class="sport-content">
-                        <h3>Badminton</h3>
-                        <p>International tournaments & championships</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Golf.jpg');" aria-label="Golf tournament"></div>
-                    <div class="sport-content">
-                        <h3>Golf</h3>
-                        <p>PGA Tour, Majors, Ryder Cup</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Cycling.png');" aria-label="Cycling race"></div>
-                    <div class="sport-content">
-                        <h3>Cycling</h3>
-                        <p>Tour de France, Giro d'Italia & classics</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Rugby.png');" aria-label="Rugby match"></div>
-                    <div class="sport-content">
-                        <h3>Rugby</h3>
-                        <p>Six Nations, World Cup, Super Rugby</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Olympic Games.jpg');" aria-label="Olympic games"></div>
-                    <div class="sport-content">
-                        <h3>Olympic Games</h3>
-                        <p>Summer & Winter Olympic coverage</p>
-                    </div>
-                </div>
-				
-            </div>
-			
-        </div>
-		
-    </section>
-
-    <!-- Entertainment Section -->
-    <section id="entertainment" class="sports" style="background: rgba(25, 20, 60, 0.3);">
-        <div class="container">
-            <h2 class="section-title">Entertainment & More</h2>
-            <div class="sports-grid">
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/movie.webp');" aria-label="Movie premiere"></div>
-                    <div class="sport-content">
-                        <h3>Movies</h3>
-                        <p>Latest releases, classics & exclusives</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Music.avif');" aria-label="Music concert"></div>
-                    <div class="sport-content">
-                        <h3>Music</h3>
-                        <p>Live performances, albums & interviews</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Concerts.jpg');" aria-label="Concert event"></div>
-                    <div class="sport-content">
-                        <h3>Concerts</h3>
-                        <p>Live performances from top artists worldwide</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Festivals.jpg');" aria-label="Music festival"></div>
-                    <div class="sport-content">
-                        <h3>Festivals</h3>
-                        <p>Major music and cultural festivals</p>
-                    </div>
-                </div>
-                
-                <div class="sport-card">
-                    <div class="sport-image" style="background-image: url('img/Award.jpeg');" aria-label="Award show"></div>
-                    <div class="sport-content">
-                        <h3>Award Shows</h3>
-                        <p>Oscars, Grammys, Emmys & more</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
+    <section class="faq-section" id="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Is this service really free?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        Is this service really free? <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, absolutely! Our sports and entertainment streaming service is completely free. There are no hidden fees, no credit card required, and no subscription charges.</p>
+                        Yes! We offer completely free access to all live sports and entertainment broadcasts. There are no subscription fees or hidden charges.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Do I need to sign up or create an account?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        What devices can I use to stream? <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Registration is required. You can start watching immediately without providing any personal information or creating an free account.</p>
+                        You can stream on any device with internet access: Smart TVs, smartphones (iOS and Android), tablets, laptops, and desktop computers.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What devices can I use to watch?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        Do I need an Amazon Prime account? <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Our service works on all devices including smartphones, tablets, laptops, desktop computers, and smart TVs. There's no app to download - just click and watch!</p>
+                        No Amazon Prime subscription is required. Our service works independently and is available to everyone for free.
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Do you have all major sports leagues?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        Are there any geographical restrictions? <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we provide coverage for F1, NASCAR, NFL, NBA, MLB, NHL, UFC, boxing, Olympic events, and more. We also offer a wide selection of entertainment content including movies, concerts, and award shows.</p>
+                        Our service is available worldwide without any geographical restrictions. You can watch from anywhere in the world.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How is this service free? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We're able to offer free access thanks to our advertising partners who help cover the costs of broadcasting rights.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
+    <!-- Final CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <div class="free-tag">
-                    <i class="fas fa-crown" aria-hidden="true"></i> 100% FREE ACCESS
-                </div>
-                
-                <h2>Start Watching Immediately</h2>
-                <p>Join millions of sports and entertainment fans enjoying free access to every match, game, event, movie and concert. No credit card required. Stream on any device, anytime, anywhere.</p>
-                
-                <div class="benefits">
-                    <div class="benefit">
-                        <i class="fas fa-rocket" aria-hidden="true"></i>
-                        <h4>Instant Access</h4>
-                        <p>Start watching immediately with free registration required</p>
-                    </div>
-                    <div class="benefit">
-                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                        <h4>Any Device</h4>
-                        <p>Works on smartphones, tablets, laptops, and smart TVs</p>
-                    </div>
-                    <div class="benefit">
-                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                        <h4>Safe & Secure</h4>
-                        <p>Completely safe streaming with no downloads required</p>
-                    </div>
-                </div>
-                
-                <a href="https://data852.click/78ff77798576fe6bc7e0/7678b3e802/?placementName=default" class="cta-button">
-                    <i class="fas fa-play" aria-hidden="true"></i> Start Streaming Now
-                </a>
-            </div>
+            <h2>Ready to Watch Unlimited Sports & Entertainment?</h2>
+            <p>Join thousands of viewers enjoying premium live broadcasts for free. No commitments, no credit card required.</p>
+            <a href="https://shrinkme.ink/l5BlQGi" target="_blank" class="cta-button">
+                <i class="fas fa-play-circle"></i> Start Streaming Now
+            </a>
+            <p class="disclaimer">This is a limited time offer. Availability may change without notice. Service availability and content may vary by region. This is an affiliate promotion.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>StreamHub</h3>
-                    <p style="color: var(--gray); line-height: 1.7; margin-top: 15px;">The ultimate free destination for sports and entertainment fans. Stream every game, event, movie and concert without paying a dime.</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Sports</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Formula 1</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> NFL</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> NBA</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> UFC</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Cricket</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Entertainment</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Movies</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Concerts</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Festivals</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Award Shows</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Documentaries</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#faq"><i class="fas fa-chevron-right" aria-hidden="true"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact Us</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Device Help</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Feedback</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Privacy Policy</a></li>
-                    </ul>
-                </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Affiliate Program</a>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 StreamHub. This is a free service for sports and entertainment enthusiasts. All content is property of their respective owners. This service does not host any streams and merely provides links to publicly available content.</p>
-            </div>
+            <p class="copyright">© 2023 StreamHub. All rights reserved. This site is not affiliated with Amazon or any sports league. All trademarks are property of their respective owners.</p>
         </div>
     </footer>
 
     <script>
-        // FAQ functionality
+        // FAQ Accordion Functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const faqItem = question.parentElement;
                 faqItem.classList.toggle('active');
+                
+                // Close other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
 </body>
 
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-5939381389120744/6100767628"
-     crossorigin="anonymous"></script>
-<!-- AdMob ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-app-pub-5939381389120744/6100767628"
-     data-ad-slot="5129616674"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-	
-<script async="async" data-cfasync="false" src="//pl26733240.profitableratecpm.com/d104ded934e7b29cdcc277dc44056d72/invoke.js"></script>
-<div id="container-d104ded934e7b29cdcc277dc44056d72"></div>
-
 <script type="text/javascript">
 	atOptions = {
-		'key' : '3b9923cc5d1097fcd593d1155e087daf',
+		'key' : 'fdb81cbb4032587b316236f39c0e37c8',
 		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
+		'height' : 250,
+		'width' : 300,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/3b9923cc5d1097fcd593d1155e087daf/invoke.js"></script>
-
-
-<script type="text/javascript">
-	atOptions = {
-		'key' : '38636e83acc5fd2cafca7b38a0110fb0',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/38636e83acc5fd2cafca7b38a0110fb0/invoke.js"></script>
-
-<script type='text/javascript' src='//pl26627074.profitableratecpm.com/6d/1e/41/6d1e41491135c93b2e4f09202b416669.js'></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '777a37756e56d729c45cb35d783b3a93',
-		'format' : 'iframe',
-		'height' : 300,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/777a37756e56d729c45cb35d783b3a93/invoke.js"></script>
-
+<script type="text/javascript" src="//www.highperformanceformat.com/fdb81cbb4032587b316236f39c0e37c8/invoke.js"></script>
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : '777a37756e56d729c45cb35d783b3a93',
+		'key' : 'ef8475bee7fead0573876e0259491aec',
 		'format' : 'iframe',
-		'height' : 300,
-		'width' : 160,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/777a37756e56d729c45cb35d783b3a93/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/ef8475bee7fead0573876e0259491aec/invoke.js"></script>
 
 
 <script type="text/javascript">
@@ -1402,14 +897,47 @@ function startOpening() {
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'ef8475bee7fead0573876e0259491aec',
+		'key' : '777a37756e56d729c45cb35d783b3a93',
 		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
+		'height' : 300,
+		'width' : 160,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/ef8475bee7fead0573876e0259491aec/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/777a37756e56d729c45cb35d783b3a93/invoke.js"></script>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '38636e83acc5fd2cafca7b38a0110fb0',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/38636e83acc5fd2cafca7b38a0110fb0/invoke.js"></script>
+
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '3b9923cc5d1097fcd593d1155e087daf',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/3b9923cc5d1097fcd593d1155e087daf/invoke.js"></script>
+
+<script async="async" data-cfasync="false" src="//pl26733240.profitableratecpm.com/d104ded934e7b29cdcc277dc44056d72/invoke.js"></script>
+<div id="container-d104ded934e7b29cdcc277dc44056d72"></div>
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
@@ -1422,6 +950,69 @@ function startOpening() {
 	};
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/fdb81cbb4032587b316236f39c0e37c8/invoke.js"></script>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'ef8475bee7fead0573876e0259491aec',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/ef8475bee7fead0573876e0259491aec/invoke.js"></script>
+
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'eafd82e9a452bb9d37893ef62d066fd9',
+		'format' : 'iframe',
+		'height' : 600,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/eafd82e9a452bb9d37893ef62d066fd9/invoke.js"></script>
+
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '777a37756e56d729c45cb35d783b3a93',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/777a37756e56d729c45cb35d783b3a93/invoke.js"></script>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '38636e83acc5fd2cafca7b38a0110fb0',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/38636e83acc5fd2cafca7b38a0110fb0/invoke.js"></script>
+
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '3b9923cc5d1097fcd593d1155e087daf',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/3b9923cc5d1097fcd593d1155e087daf/invoke.js"></script>
+
+<script async="async" data-cfasync="false" src="//pl26733240.profitableratecpm.com/d104ded934e7b29cdcc277dc44056d72/invoke.js"></script>
+<div id="container-d104ded934e7b29cdcc277dc44056d72"></div>
+
+
 
 <script type="text/javascript">
 	atOptions = {
@@ -1446,7 +1037,6 @@ function startOpening() {
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/91637d4af9bb1687ba1b5a30745a8dbf/invoke.js"></script>
 
-
 <script type="text/javascript">
 	atOptions = {
 		'key' : '19b1a8122d6299e3f54824c9159a2eef',
@@ -1457,7 +1047,6 @@ function startOpening() {
 	};
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/19b1a8122d6299e3f54824c9159a2eef/invoke.js"></script>
-
 
 
 <script type="text/javascript">
@@ -1471,7 +1060,27 @@ function startOpening() {
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/8ffd80ba1ce9b3b20f6ef8add7a52d04/invoke.js"></script>
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ffd80ba1ce9b3b20f6ef8add7a52d04',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/8ffd80ba1ce9b3b20f6ef8add7a52d04/invoke.js"></script>
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8ffd80ba1ce9b3b20f6ef8add7a52d04',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/8ffd80ba1ce9b3b20f6ef8add7a52d04/invoke.js"></script>
 
 <script type="text/javascript">
 	atOptions = {
@@ -1484,20 +1093,22 @@ function startOpening() {
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/740ec2298d57599bac6442fe8b003117/invoke.js"></script>
 
-
-
-
 <script type="text/javascript">
 	atOptions = {
-		'key' : '740ec2298d57599bac6442fe8b003117',
+		'key' : '99a3f8e661b472435caa16e64e9e409b',
 		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
+		'height' : 50,
+		'width' : 320,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/740ec2298d57599bac6442fe8b003117/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/99a3f8e661b472435caa16e64e9e409b/invoke.js"></script>
+
+<script async="async" data-cfasync="false" src="//pl26832846.profitableratecpm.com/c36ef477250a474287aa1a622781fc9e/invoke.js"></script>
+<div id="container-c36ef477250a474287aa1a622781fc9e"></div>
 
 
-	
+
+
+
 </html>
